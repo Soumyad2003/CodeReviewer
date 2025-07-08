@@ -3,7 +3,7 @@
 
 An intelligent code review tool powered by Google Gemini (via the Generative AI API). This full-stack application allows developers to paste code and receive detailed reviews based on modern best practices, clean coding principles, and performance/security guidelines.
 
-> 📌 Live Demo: [Visit Frontend](https://code-reviewer-qgkdaxhny-soumyadeeps-projects-825cfe45.vercel.app/)
+> 📌 Live Demo: [Visit Frontend](https://code-reviewer-frontend-cyan.vercel.app/)
 > 🌐 Backend API: [Render Backend](https://codereviewer-backend-0hrj.onrender.com)
 
 ---
@@ -31,7 +31,7 @@ An intelligent code review tool powered by Google Gemini (via the Generative AI 
 ---
 
 ## 📸 Screenshots
-![image](https://github.com/user-attachments/assets/2f763683-1696-48c0-9be2-97e091f397d6)
+![AI powered code reviewer](image.png)
 
 
 
