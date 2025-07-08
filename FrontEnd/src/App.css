@@ -1,6 +1,34 @@
+.app-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 1rem;
+  color: #3c3c3c;
+  background: #f0f0f0;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* This ensures main takes up remaining space */
+main {
+  flex: 1;
+  display: flex;
+  padding: 1.5rem;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+
 * {
-  margin: 0%;
-  padding: 0%;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -9,10 +37,11 @@ body,
 #root {
   height: 100%;
   width: 100%;
+  overflow: hidden;
+  font-family: "Fira Code", monospace;
 }
 
 main {
-  height: 100%;
   width: 100%;
   padding: 1.5rem;
   display: flex;
@@ -21,68 +50,93 @@ main {
 
 main .left,
 main .right {
+  flex: 1;
   height: 100%;
-  flex-basis: 50%;
   border-radius: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
+/* LEFT SECTION */
 main .left {
   background-color: #bfacac;
   position: relative;
 }
 
-.left .code,
-.code pre,
-.code pre code {
-  color: white;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  border-radius: 0.7rem;
+.left .code {
+  flex: 1;
   background-color: #0c0c0c;
+  border-radius: 0.7rem 0.7rem 0 0;
+  overflow: auto;
+  padding: 0.5rem;
+  color: white;
 }
 
+/* Prism code block tweaks */
+.code pre,
+.code pre code {
+  margin: 0;
+  min-height: 100%;
+}
+
+/* REVIEW BUTTON */
 main .left .review {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
-  background-color: rgb(219, 219, 255);
-  color: #000000;
-  padding: 0.5rem 2rem;
+  padding: 0.6rem 1.5rem;
   font-weight: 500;
   cursor: pointer;
   user-select: none;
   border-radius: 0.7rem;
-}
-
-.left .review {
   background: linear-gradient(135deg, #7b5cff, #4e8cff);
   color: white;
   border: none;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
 }
 
 .left .review:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
-
-
+/* RIGHT SECTION */
 main .right {
-  color: #f1f1f1;
   background-color: #343434;
+  color: #f1f1f1;
   padding: 1rem 2rem;
   font-size: 1rem;
-  overflow: auto;
+  overflow-y: auto;
 }
 
-.left .code::-webkit-scrollbar {
+/* Scrollbar styling */
+.code::-webkit-scrollbar,
+.right::-webkit-scrollbar {
   width: 8px;
 }
-.left .code::-webkit-scrollbar-thumb {
+.code::-webkit-scrollbar-thumb,
+.right::-webkit-scrollbar-thumb {
   background: #555;
   border-radius: 4px;
 }
 
+.app-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #3c3c3c;
+  background: #e6e6e6;
+  padding: 0.8rem;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
