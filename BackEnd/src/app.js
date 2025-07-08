@@ -11,7 +11,7 @@ app.use(express.json())
 app.use('/ai', aiRoutes)
 
 app.get('/',(req,res)=>{
-    res.send('Hello World')
+    res.send('This is the backend deployment of the web application...It looks blank but is full of complex code snippets from inside :)')
 })
 
 
